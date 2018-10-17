@@ -5,20 +5,31 @@
  */
 package gestionAme;
 
+import Connexion.SqlConnect;
+
 /**
  *
  * @author LeRoux
  */
+
 public class DefAme {
 
     public String prenom;
     public String nom;
     public int karma;
+    private SqlConnect connec;
     
-    public DefAme(String prenom, String nom, int karma) {
+    public DefAme(String prenom, String nom, int karma,SqlConnect myBase) {
         this.prenom = prenom;
         this.nom = nom;
         this.karma = karma;
+        this.connec = myBase;
+        connec.connect();
+    }
+    
+    public void ajoutDansBDD () {
+        String sql="INSERT INTO Ame VALUES (NULL,"+this.nom+","+this.prenom+","+this.karma+");";
+        connec.query(sql);
     }
     
 }
