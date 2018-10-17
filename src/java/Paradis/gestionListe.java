@@ -14,12 +14,7 @@ import gestionAme.DefAme;
  */
 public class gestionListe {
 
-    public gestionListe(DefAme personne,SqlConnect myBase) {
-        String pouet = "SELECT idAme FROM Ame WHERE nom="+personne.nom+" AND prenom="+personne.prenom+" AND karma="+personne.karma+";";
-        String sql = "INSERT INTO Paradis VALUES (NULL,"+pouet+");";
-        myBase.connect();
-        myBase.query(sql);
-                
+    public gestionListe(DefAme personne,SqlConnect myBase) {                
     }
     
 }

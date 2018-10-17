@@ -18,23 +18,17 @@ public class DefAme {
     public String prenom;
     public String nom;
     public int karma;
-    private final SqlConnect connec;
     
-    public DefAme(String prenom, String nom, int karma,SqlConnect myBase) {
+    public DefAme(String prenom, String nom, int karma) {
         this.prenom = prenom;
         this.nom = nom;
         this.karma = karma;
-        this.connec = myBase;
-        connec.connect();
     }
     
     public void init() {
-        DefAme brrr = new DefAme("Gilles","French",42,connec);
     }
     
     public void ajoutDansBDD () {
-        String sql="INSERT INTO Ame VALUES (NULL,"+this.nom+","+this.prenom+","+this.karma+");";
-        connec.query(sql);
     }
 
     public String getPrenom() {
