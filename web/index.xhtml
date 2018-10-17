@@ -12,11 +12,15 @@
         Vous inscrire :
         <br />
         <h:form>
+            <?php 
+            $maBase = #{maBase.connect()};
+            ?>
             Votre nom : <p:inputText id="nom"/><br/>
             Votre prénom : <p:inputText id="prenom"/><br/>
             Votre age : <p:inputText id="age"/><br/>
-            Origine : <p:inputText id="origine"/>
-            
+            Karma : 
+            <input type="submit" value="prout" />
+            <!--<p:button onclick=""/>-->
         </h:form>
         <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
     </h:body>

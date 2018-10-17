@@ -6,12 +6,14 @@
 package Connexion;
 
 import java.sql.*;
+import javax.faces.bean.ManagedBean;
 
 
 /**
  *
  * @author LeRoux
  */
+@ManagedBean(name="maBase",eager=true)
 public final class SqlConnect {
     private String DBPath = "C:/SQLiteStudio/ProjetJEE.db";
     private Connection connection = null;
