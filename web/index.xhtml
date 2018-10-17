@@ -42,7 +42,7 @@
         dans l'index : appeler en faisant # {classepackageweb.valeur}
         
         -->
-        Vous inscrire :
+        <!--Vous inscrire :
         <br />
         <h:form>
             
@@ -50,8 +50,12 @@
             Votre prénom : <p:inputText id="prenom"/><br/>
             Votre age : <p:inputText id="age"/><br/>
             Karma : 
-        </h:form>
-        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+        </h:form>-->
+        <p:dataList value="#{vue}" var="pit">
+            #{pit.valeur}
+        </p:dataList>
+        
+        #{vue.valeur}<br/>
     </h:body>
 </html>
 
