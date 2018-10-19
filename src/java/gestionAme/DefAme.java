@@ -5,7 +5,6 @@
  */
 package gestionAme;
 
-import Connexion.SqlConnect;
 import javax.faces.bean.*;
 
 /**

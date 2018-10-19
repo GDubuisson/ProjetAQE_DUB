@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import Entity.Truc;
+import Entity.Place;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,19 +14,19 @@ import javax.ejb.Local;
  * @author LeRoux
  */
 @Local
-public interface TrucFacadeLocal {
+public interface PlaceFacadeLocal {
 
-    void create(Truc truc);
+    void create(Place place);
 
-    void edit(Truc truc);
+    void edit(Place place);
 
-    void remove(Truc truc);
+    void remove(Place place);
 
-    Truc find(Object id);
+    Place find(Object id);
 
-    List<Truc> findAll();
+    List<Place> findAll();
 
-    List<Truc> findRange(int[] range);
+    List<Place> findRange(int[] range);
 
     int count();
     

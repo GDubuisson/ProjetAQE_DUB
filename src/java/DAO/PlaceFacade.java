@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import Entity.Truc;
+import Entity.Place;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author LeRoux
  */
 @Stateless
-public class TrucFacade extends AbstractFacade<Truc> implements TrucFacadeLocal {
+public class PlaceFacade extends AbstractFacade<Place> implements PlaceFacadeLocal {
 
     @PersistenceContext(unitName = "ProjetAQE_DUBPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class TrucFacade extends AbstractFacade<Truc> implements TrucFacadeLocal 
         return em;
     }
 
-    public TrucFacade() {
-        super(Truc.class);
+    public PlaceFacade() {
+        super(Place.class);
     }
     
 }

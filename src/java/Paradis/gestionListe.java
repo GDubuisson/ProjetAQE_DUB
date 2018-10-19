@@ -5,8 +5,6 @@
  */
 package Paradis;
 
-import java.util.*;
-import Connexion.SqlConnect;
 import gestionAme.DefAme;
 /**
  *
@@ -14,7 +12,7 @@ import gestionAme.DefAme;
  */
 public class gestionListe {
 
-    public gestionListe(DefAme personne,SqlConnect myBase) {                
+    public gestionListe(DefAme personne) {                
     }
     
 }

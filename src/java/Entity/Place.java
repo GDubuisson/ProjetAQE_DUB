@@ -23,44 +23,37 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author LeRoux
  */
 @Entity
-@Table(name = "truc")
+@Table(name = "place")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Truc.findAll", query = "SELECT t FROM Truc t")
-    , @NamedQuery(name = "Truc.findById", query = "SELECT t FROM Truc t WHERE t.id = :id")
-    , @NamedQuery(name = "Truc.findByNom", query = "SELECT t FROM Truc t WHERE t.nom = :nom")
-    , @NamedQuery(name = "Truc.findByPrenom", query = "SELECT t FROM Truc t WHERE t.prenom = :prenom")
-    , @NamedQuery(name = "Truc.findByAge", query = "SELECT t FROM Truc t WHERE t.age = :age")})
-public class Truc implements Serializable {
+    @NamedQuery(name = "Place.findAll", query = "SELECT p FROM Place p")
+    , @NamedQuery(name = "Place.findByIdPlace", query = "SELECT p FROM Place p WHERE p.idPlace = :idPlace")
+    , @NamedQuery(name = "Place.findByNom", query = "SELECT p FROM Place p WHERE p.nom = :nom")})
+public class Place implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id")
-    private Integer id;
+    @Column(name = "idPlace")
+    private Integer idPlace;
     @Size(max = 50)
     @Column(name = "nom")
     private String nom;
-    @Size(max = 50)
-    @Column(name = "prenom")
-    private String prenom;
-    @Column(name = "age")
-    private Integer age;
 
-    public Truc() {
+    public Place() {
     }
 
-    public Truc(Integer id) {
-        this.id = id;
+    public Place(Integer idPlace) {
+        this.idPlace = idPlace;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdPlace() {
+        return idPlace;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdPlace(Integer idPlace) {
+        this.idPlace = idPlace;
     }
 
     public String getNom() {
@@ -71,37 +64,21 @@ public class Truc implements Serializable {
         this.nom = nom;
     }
 
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idPlace != null ? idPlace.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Truc)) {
+        if (!(object instanceof Place)) {
             return false;
         }
-        Truc other = (Truc) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        Place other = (Place) object;
+        if ((this.idPlace == null && other.idPlace != null) || (this.idPlace != null && !this.idPlace.equals(other.idPlace))) {
             return false;
         }
         return true;
@@ -109,7 +86,7 @@ public class Truc implements Serializable {
 
     @Override
     public String toString() {
-        return "Entity.Truc[ id=" + id + " ]";
+        return "Entity.Place[ idPlace=" + idPlace + " ]";
     }
     
 }
