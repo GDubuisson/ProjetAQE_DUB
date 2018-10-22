@@ -44,4 +44,8 @@ public class Vue implements Serializable {
             Ame karmaAme = ameDAO.find(1);
             return karmaAme.getKarma();
     }
+    
+    public String getAll() {
+        return getAmeNom()+" "+getAmePrenom()+" "+ getAmeKarma();
+    }
 }
