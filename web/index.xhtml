@@ -40,12 +40,30 @@
         dans l'index : appeler en faisant # {classepackageweb.valeur}
         
         -->
-        <p:dataList value="#{vue.all}" var="pit">
-            #{pit}
-        </p:dataList>
-        #{vue.ameKarma} <br/>
-        #{vue.ameNom} <br/>
-        #{vue.amePrenom}
+        <p:dataTable id="table" value="#{vue.retourneTout()}" var="gout">
+            <p:column headerText="Id">
+                <h:outputText value="#{gout.idAme}" />
+            </p:column>
+            
+            <p:column headerText="Nom">
+                <h:outputText value="#{gout.nom}" />
+            </p:column>
+ 
+            <p:column headerText="Prenom">
+                <h:outputText value="#{gout.prenom}" />
+            </p:column>
+ 
+            <p:column headerText="Karma">
+                <h:outputText value="#{gout.karma}" />
+            </p:column>
+        </p:dataTable>
+        <br/>
+        <h:form id="myForm">
+            <p:inputText id="nom" /> <br/>
+            <p:inputText id="prenom" /> <br/>
+            <p:inputNumber id="karma" /> <br/>
+            <p:commandButton value="Envoyer" actionListener="#{vue.creerAme("nom","prenom","karma")}" update="table" />
+        </h:form>
     </h:body>
 </html>
 
