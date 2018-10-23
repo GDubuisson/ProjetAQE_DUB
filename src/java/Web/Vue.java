@@ -11,6 +11,7 @@ import entity.Ame;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.List;
 import javax.ejb.EJB;
 
 /**
@@ -23,13 +24,14 @@ public class Vue implements Serializable {
 
     @EJB
     AmeFacadeLocal ameDAO;
+    @EJB
     PlaceFacadeLocal placeDAO;
     /**
      * Creates a new instance of Vue
      */
     public Vue() {
     }
-    
+        
     public String getAmeNom() {
             Ame nomAme = ameDAO.find(1);
             return nomAme.getNom();
@@ -46,6 +48,29 @@ public class Vue implements Serializable {
     }
     
     public String getAll() {
-        return getAmeNom()+" "+getAmePrenom()+" "+ getAmeKarma();
+        return "Nom : "+getAmeNom()+" / Prénom : "+getAmePrenom()+" / Karma : "+ getAmeKarma();
+    }
+    
+    public void creerAme(String nom, String prenom, int karma) {
+        Ame newAme = new Ame();
+        newAme.setNom(nom);
+        newAme.setPrenom(prenom);
+        newAme.setKarma(karma);
+        if (karma > 0) {
+            newAme.setIdPlace(1);
+        }
+        else if (karma < 0){
+            newAme.setIdPlace(2);
+        }
+        else {
+            newAme.setIdPlace(3);
+        }
+        newAme.setIdAme(ameDAO.count()+1);
+        ameDAO.create(newAme);
+    }
+    
+    public List<Ame> retourneTout() {
+        System.err.println("Web.Vue.retourneTout()");
+        return ameDAO.findAll();
     }
 }
