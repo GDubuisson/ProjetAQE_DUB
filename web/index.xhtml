@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Page d'accueil</title>
     </h:head>
     <h:body>
         <!-- RELIER LE CODE A UNE BDD
@@ -40,30 +40,29 @@
         dans l'index : appeler en faisant # {classepackageweb.valeur}
         
         -->
-        <p:dataTable id="table" value="#{vue.retourneTout()}" var="gout">
+        <!--<p:dataTable id="table" value="" var="gout">
             <p:column headerText="Id">
-                <h:outputText value="#{gout.idAme}" />
+                <h:outputText value="" />
             </p:column>
             
             <p:column headerText="Nom">
-                <h:outputText value="#{gout.nom}" />
+                <h:outputText value="" />
             </p:column>
  
             <p:column headerText="Prenom">
-                <h:outputText value="#{gout.prenom}" />
+                <h:outputText value="" />
             </p:column>
  
             <p:column headerText="Karma">
-                <h:outputText value="#{gout.karma}" />
+                <h:outputText value="" />
+            </p:column>
+            <p:column headerText="Place">
+                <h:outputText value=""/>
             </p:column>
         </p:dataTable>
-        <br/>
-        <h:form id="myForm">
-            <p:inputText id="nom" /> <br/>
-            <p:inputText id="prenom" /> <br/>
-            <p:inputNumber id="karma" /> <br/>
-            <p:commandButton value="Envoyer" actionListener="#{vue.creerAme("nom","prenom","karma")}" update="table" />
-        </h:form>
+        <br/>-->
+        <h1><center>APPLICATION D'INSCRIPTION POST-MORTEM</center></h1>
+        <h:form><center><p:commandButton value="S'inscrire" action="form_inscription.xhtml"/></center></h:form>
+        
     </h:body>
 </html>
-

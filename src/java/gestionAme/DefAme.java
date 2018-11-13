@@ -17,17 +17,11 @@ public class DefAme {
     public String prenom;
     public String nom;
     public int karma;
-    
-    public DefAme(String prenom, String nom, int karma) {
-        this.prenom = prenom;
-        this.nom = nom;
-        this.karma = karma;
+
+    public DefAme() {
     }
     
     public void init() {
-    }
-    
-    public void ajoutDansBDD () {
     }
 
     public String getPrenom() {
