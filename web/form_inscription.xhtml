@@ -7,7 +7,8 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Formulaire d'inscription</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,12 +16,33 @@ and open the template in the editor.
     <h:body>
         <h:form id="formulaire">
             <h:panelGrid columns="2" cellpadding="5">
-                Nom : <p:inputText id="nom" value="#{test.nom}"/> <br/>
-                Prenom : <p:inputText id="prenom" value="#{test.prenom}" /> <br/>
-                Date de Naissance : <p:inputMask id="ddn" mask="99/99/9999"/> <br/>
-                Date de Mort : <p:inputMask id="ddm" mask="99/99/9999"/> <br/>
-                Raison de la mort : <p:inputText id="rdm"/> <br/>
-                Religion : <p:inputText id="religion"/> <br/>
+                Nom : <p:inputText id="nom" value="#{test.nom}"/>
+                Prenom : <p:inputText id="prenom" value="#{test.prenom}" />
+                Date de Naissance : <p:inputMask id="ddn" mask="99/99/9999"/>
+                Date de Mort : <p:inputMask id="ddm" mask="99/99/9999"/>
+                Raison de la mort : <p:inputText id="rdm"/>
+                Religion : <p:inputText id="religion"/>
+                Destination attendue :
+                <p:selectOneRadio id="destination">
+                    <f:selectItem itemLabel="Bon endroit" itemValue="+5" />
+                    <f:selectItem itemLabel="Mauvais endroit" itemValue="-5" />
+                    <f:selectItem itemLabel="Indécis" itemValue="+10"/>
+                    <f:selectItem itemLabel="Néant" itemValue="0"/>
+                    <f:selectItem itemLabel="Réincarnation" itemValue="-10"/>
+                </p:selectOneRadio>
+                Quelle est votre motivation à la réponse précedente :
+                <p:inputTextarea id="motivText"/>
+                Couleur de cheveux :
+                <p:selectOneRadio id="cheveux">
+                    <f:selectItem itemLabel="Brun" itemValue="-5"/>
+                    <f:selectItem itemLabel="Châtain" itemValue="+5"/>
+                    <f:selectItem itemLabel="Roux" itemValue="-10"/>
+                    <f:selectItem itemLabel="Blond" itemValue="+10"/>
+                </p:selectOneRadio>
+                Ethnie : <p:inputText id="ethnie"/>
+                Handicap physique : <p:inputSwitch id="HPhy" />
+                Handicap mental : <p:inputSwitch id="HMent"/>
+                Autre handicap : <p:inputSwitch id="autreHand"/>
                 <p:commandButton value="Envoyer" actionListener="#{vue.creerAme(test.nom,test.prenom,test.karma)}"/>
             </h:panelGrid>
         </h:form>
