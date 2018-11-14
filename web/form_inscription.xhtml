@@ -14,11 +14,11 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <h:form id="formulaire">
+        <h:form id="formulaire" >
             <h2>Questions générales</h2><br/>
             <h:panelGrid columns="2"  style="margin-bottom:10px" cellpadding="5">
-                Nom : <p:inputText id="nom" value="#{test.nom}"/>
-                Prenom : <p:inputText id="prenom" value="#{test.prenom}" />
+                Nom : <p:inputText id="nom"/>
+                Prenom : <p:inputText id="prenom"/>
                 Date de Naissance : <p:inputMask id="ddn" mask="99/99/9999"/>
                 Date de Mort : <p:inputMask id="ddm" mask="99/99/9999"/>
                 Raison de la mort : <p:inputText id="rdm"/>
@@ -45,7 +45,9 @@ and open the template in the editor.
                 Handicap mental : <p:inputSwitch id="HMent" style="width: 50px" onLabel="Oui" offLabel='Non'/>
                 Autre handicap : <p:inputSwitch id="autreHand" style="width: 50px" onLabel="Oui" offLabel='Non'/>
                 </h:panelGrid>
-            <p:commandButton value="Suivant" action="pesee.xhtml"/>
+            <p:commandButton value="Suivant" action="pesee.xhtml">
+                <!-- C'est ici qu'on met les "<f:param" normalement -->
+            </p:commandButton>
         </h:form>
     </h:body>
 </html>
