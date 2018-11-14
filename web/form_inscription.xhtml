@@ -47,6 +47,7 @@ and open the template in the editor.
                 </h:panelGrid>
             <p:commandButton value="Suivant" action="pesee.xhtml">
                 <!-- C'est ici qu'on met les "<f:param" normalement -->
+                <f:param name="scoredate" value="#{karma.calculDate(ddn,ddm)}"/>
             </p:commandButton>
         </h:form>
     </h:body>
