@@ -15,7 +15,8 @@ and open the template in the editor.
     </h:head>
     <h:body>
         <h:form id="formulaire">
-            <h:panelGrid columns="2" cellpadding="5">
+            <h2>Questions générales</h2><br/>
+            <h:panelGrid columns="2"  style="margin-bottom:10px" cellpadding="5">
                 Nom : <p:inputText id="nom" value="#{test.nom}"/>
                 Prenom : <p:inputText id="prenom" value="#{test.prenom}" />
                 Date de Naissance : <p:inputMask id="ddn" mask="99/99/9999"/>
@@ -40,12 +41,11 @@ and open the template in the editor.
                     <f:selectItem itemLabel="Blond" itemValue="+10"/>
                 </p:selectOneRadio>
                 Ethnie : <p:inputText id="ethnie"/>
-                Handicap physique : <p:inputSwitch id="HPhy" />
-                Handicap mental : <p:inputSwitch id="HMent"/>
-                Autre handicap : <p:inputSwitch id="autreHand"/>
-                
-                <p:commandButton value="Envoyer" actionListener="#{vue.creerAme(test.nom,test.prenom,test.karma)}"/>
-            </h:panelGrid>
+                Handicap physique : <p:inputSwitch id="HPhy" style="width: 50px" onLabel="Oui" offLabel='Non'/>
+                Handicap mental : <p:inputSwitch id="HMent" style="width: 50px" onLabel="Oui" offLabel='Non'/>
+                Autre handicap : <p:inputSwitch id="autreHand" style="width: 50px" onLabel="Oui" offLabel='Non'/>
+                </h:panelGrid>
+            <p:commandButton value="Suivant" action="pesee.xhtml"/>
         </h:form>
     </h:body>
 </html>

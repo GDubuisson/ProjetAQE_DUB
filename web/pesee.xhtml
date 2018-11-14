@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h2>Pesée de votre âme</h2>
+        <h3>Fréquence de pratique de 1 à 5 <br/> 1 = Jamais / 5 = Tout le temps</h3>
+            <h:panelGrid columns="2"  style="margin-bottom:10px" cellpadding="5">
+                Avez vous un autre Dieu que Dieu? <p:inputSwitch id='autreDieu' style="width: 50px" onLabel="Oui" offLabel="Non"/>
+                Avez vous pratiqué l'idolatrie?
+                <p:selectOneRadio id="idolatrie">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous blasphemé?
+                <p:selectOneRadio id="blaspheme">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué vous le Shabbat (ou équivalent)?
+                <p:selectOneRadio id="shabbat">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous tué :
+                <p:selectOneRadio id="tuer">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous commis l’adultère :
+                <p:selectOneRadio id="adultere">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous commis des vols :
+                <p:selectOneRadio id="vols">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué le faux témoignage :
+                <p:selectOneRadio id="temoignage">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous convoité?
+                <p:selectOneRadio id="convoite">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué la paresse :
+                <p:selectOneRadio id="paresse">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué l’avarice :
+                <p:selectOneRadio id="avarice">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué la colère :
+                <p:selectOneRadio id="colere">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué l’envie :
+                <p:selectOneRadio id="envie">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué la gourmandise :
+                <p:selectOneRadio id="gourmandise">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué la luxure :
+                <p:selectOneRadio id="luxure">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Avez vous pratiqué l’orgueil :
+                <p:selectOneRadio id="orgueil">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+            </h:panelGrid><br/>
+                <h3>Veuillez noter les activités suivantes selon votre avis<br/>
+                1 = Mal / 5 = Bien</h3>
+            <h:panelGrid columns="2"  style="margin-bottom:10px" cellpadding="5"> 
+                Tuer des infidèles :
+                <p:selectOneRadio id="infidele">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Voler la sucette d’un bébé :
+                <p:selectOneRadio id="sucette">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Violer une personne :
+                <p:selectOneRadio id="viol">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Aider une personne :
+                <p:selectOneRadio id="aide">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Aider une personne à violer une personne :
+                <p:selectOneRadio id="aideViol">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Mentir :
+                <p:selectOneRadio id="mentir">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Prier : 
+                <p:selectOneRadio id="orgueil">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Sauver le monde :
+                <p:selectOneRadio id="sauver">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Pratiquer la fornication :
+                <p:selectOneRadio id="fornication">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Pratiquer la procréation : 
+                <p:selectOneRadio id="procreation">
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Se cultiver :
+                <p:selectOneRadio id="cultiver">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Lire le Bescherelle :
+                <p:selectOneRadio id="bescherelle">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+                Lire la Bible (ou plagiat) :
+                <p:selectOneRadio id="bible">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
+                </p:selectOneRadio>
+            </h:panelGrid>
+    </h:body>
+</html>
