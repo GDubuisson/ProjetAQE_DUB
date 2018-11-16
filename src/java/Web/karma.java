@@ -24,29 +24,69 @@ import java.util.Date;
 public class karma implements Serializable{
     
     private int score = 0;
+    private Date ddn;
+    private Date ddm;
+    private boolean HPhy;
+    private boolean HMent;
+    private boolean autreHand;
+
     
     public karma() {
     }
     
-    public void ajoutPoints(int score) {
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
         this.score += score;
     }
-    
-    public int scoreFinal() {
-        return this.score;
+
+    public Date getDdn() {
+        return ddn;
+    }
+
+    public void setDdn(Date ddn) {
+        this.ddn = ddn;
+    }
+
+    public Date getDdm() {
+        return ddm;
+    }
+
+    public void setDdm(Date ddm) {
+        this.ddm = ddm;
+    }
+
+    public boolean isHPhy() {
+        return HPhy;
+    }
+
+    public void setHPhy(boolean HPhy) {
+        this.HPhy = HPhy;
+    }
+
+    public boolean isHMent() {
+        return HMent;
+    }
+
+    public void setHMent(boolean HMent) {
+        this.HMent = HMent;
+    }
+
+    public boolean isAutreHand() {
+        return autreHand;
+    }
+
+    public void setAutreHand(boolean autreHand) {
+        this.autreHand = autreHand;
     }
     
-    public int calculDate(Date ddn, Date ddm) {
-        if (ddn == null || ddm == null) {
-            ajoutPoints(5);
-            return(5);
-        }
-        else if (((ddm.getTime()-ddn.getTime())/(1000*60*60*24*365))<50){
-            ajoutPoints(-5);
-            return -5;
+    public void calculDate() {
+        if (((ddm.getTime()-ddn.getTime())/(1000*60*60*24*365))<50){
+            setScore(-5);
         } else {
-            ajoutPoints(0);
-            return 0;
+            setScore(0);
         }
     }
 }
