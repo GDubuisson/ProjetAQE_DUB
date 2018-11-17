@@ -26,30 +26,47 @@ public class Vue implements Serializable {
     AmeFacadeLocal ameDAO;
     @EJB
     PlaceFacadeLocal placeDAO;
+    
+    private String amePrenom;
+    private String ameNom;
     /**
      * Creates a new instance of Vue
      */
     public Vue() {
     }
-        
-    public String getAmeNom() {
-            Ame nomAme = ameDAO.find(1);
-            return nomAme.getNom();
-    }
     
     public String getAmePrenom() {
-            Ame prenomAme = ameDAO.find(1);
-            return prenomAme.getPrenom();
+        return amePrenom;
+    }
+
+    public void setAmePrenom(String amePrenom) {
+        this.amePrenom = amePrenom;
+    }
+
+    public String getAmeNom() {
+        return ameNom;
     }
     
+    public void setAmeNom(String ameNom) {
+        this.ameNom = ameNom;
+    }
+
+    /**public String getAmeNom() {
+    Ame nomAme = ameDAO.find(1);
+    return nomAme.getNom();
+    }
+    public String getAmePrenom() {
+    Ame prenomAme = ameDAO.find(1);
+    return prenomAme.getPrenom();
+    }
     public int getAmeKarma() {
-            Ame karmaAme = ameDAO.find(1);
-            return karmaAme.getKarma();
+    Ame karmaAme = ameDAO.find(1);
+    return karmaAme.getKarma();
     }
-    
+
     public String getAll() {
         return "Nom : "+getAmeNom()+" / Prénom : "+getAmePrenom()+" / Karma : "+ getAmeKarma();
-    }
+    }**/
     
     public void creerAme(String nom, String prenom, int karma) {
         Ame newAme = new Ame();
