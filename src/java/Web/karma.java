@@ -83,10 +83,13 @@ public class karma implements Serializable{
     }
     
     public void calculDate() {
-        if (((ddm.getTime()-ddn.getTime())/(1000*60*60*24*365))<50){
-            setScore(-5);
-        } else {
+        if (ddn == null || ddm == null) {
             setScore(0);
+        }
+        else if (((this.ddm.getTime()-this.ddn.getTime())/(1000*60*60*24*365))<50){
+            setScore(-10);
+        } else {
+            setScore(10);
         }
     }
 }
