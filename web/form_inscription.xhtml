@@ -46,7 +46,7 @@ and open the template in the editor.
                 Autre handicap : <p:inputSwitch id="autreHand" style="width: 50px" onLabel="Oui" offLabel='Non' value="#{karma.autreHand}"/>
                 </h:panelGrid>
             <p:commandButton value="Suivant" action="pesee.xhtml">
-                <!-- C'est ici qu'on met les "<f:param" normalement -->
+               <f:actionListener binding="#{karma.calculDate()}"/>
             </p:commandButton>
         </h:form>
     </h:body>

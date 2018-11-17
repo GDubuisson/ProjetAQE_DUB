@@ -13,7 +13,8 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
-    <h:body>        
+    <h:body>   
+        <h:form id="formulaire2" >
         <h2>Pesée de votre âme</h2>
         <h3>Fréquence de pratique de 1 à 5 <br/> 1 = Jamais / 5 = Tout le temps</h3>
             <h:panelGrid columns="2"  style="margin-bottom:10px" cellpadding="5" width="913">
@@ -247,5 +248,9 @@ and open the template in the editor.
                     <f:selectItem itemLabel="5" itemValue="10"/>
                 </p:selectOneRadio>
             </h:panelGrid>
+            <p:commandButton value="Suivant" actionListener="#{vue.creerAme("nom1","nom2",karma.score)}">
+                <f:actionListener binding="index.xhtml"/>
+            </p:commandButton>
+            <h:form>
     </h:body>
 </html>
