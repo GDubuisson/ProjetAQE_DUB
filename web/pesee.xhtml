@@ -249,7 +249,7 @@ and open the template in the editor.
                 </p:selectOneRadio>
             </h:panelGrid>
             <p:commandButton value="Suivant" action="index.xhtml">
-               <f:actionListener binding="#{vue.creerAme('guillaume','guillame',karma.score)}"/>
+                <f:actionListener binding="#{vue.creerAme(vue.ameNom,vue.amePrenom,karma.score)}"/>
             </p:commandButton>
         </h:form>
     </h:body>
