@@ -20,19 +20,19 @@ and open the template in the editor.
                 Avez vous un autre Dieu que Dieu? <p:inputSwitch id='autreDieu' style="width: 50px" onLabel="Oui" offLabel="Non"/>
                 Avez vous pratiqué l'idolatrie?
                 <p:selectOneRadio id="idolatrie" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
-                    <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
-                </p:selectOneRadio>
-                Avez vous blasphemé?
-                <p:selectOneRadio id="blaspheme" value="#{karma.score}">
                     <f:selectItem itemLabel="1" itemValue="10"/>
                     <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
                     <f:selectItem itemLabel="4" itemValue="-5"/>
                     <f:selectItem itemLabel="5" itemValue="-10"/>
+                </p:selectOneRadio>
+                Avez vous blasphemé?
+                <p:selectOneRadio id="blaspheme" value="#{karma.score}">
+                    <f:selectItem itemLabel="1" itemValue="-10"/>
+                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="3" itemValue="0"/>
+                    <f:selectItem itemLabel="4" itemValue="5"/>
+                    <f:selectItem itemLabel="5" itemValue="10"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué vous le Shabbat (ou équivalent)?
                 <p:selectOneRadio id="shabbat" value="#{karma.score}">
@@ -44,99 +44,99 @@ and open the template in the editor.
                 </p:selectOneRadio>
                 Avez vous tué :
                 <p:selectOneRadio id="tuer" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
                 </p:selectOneRadio>
                 Avez vous commis l’adultère :
                 <p:selectOneRadio id="adultere" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
                 </p:selectOneRadio>
                 Avez vous commis des vols :
                 <p:selectOneRadio id="vols" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué le faux témoignage :
                 <p:selectOneRadio id="temoignage" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
                 </p:selectOneRadio>
                 Avez vous convoité?
                 <p:selectOneRadio id="convoite" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-5"/>
+                    <f:selectItem itemLabel="5" itemValue="-10"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué la paresse :
                 <p:selectOneRadio id="paresse" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué l’avarice :
                 <p:selectOneRadio id="avarice" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué la colère :
                 <p:selectOneRadio id="colere" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué l’envie :
                 <p:selectOneRadio id="envie" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué la gourmandise :
                 <p:selectOneRadio id="gourmandise" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué la luxure :
                 <p:selectOneRadio id="luxure" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Avez vous pratiqué l’orgueil :
                 <p:selectOneRadio id="orgueil" value="#{karma.score}">
-                    <f:selectItem itemLabel="1" itemValue="-10"/>
-                    <f:selectItem itemLabel="2" itemValue="-5"/>
+                    <f:selectItem itemLabel="1" itemValue="10"/>
+                    <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
             </h:panelGrid><br/>
                 <h3>Veuillez noter les activités suivantes selon votre avis<br/>
@@ -179,8 +179,8 @@ and open the template in the editor.
                     <f:selectItem itemLabel="1" itemValue="10"/>
                     <f:selectItem itemLabel="2" itemValue="5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="-5"/>
-                    <f:selectItem itemLabel="5" itemValue="-10"/>
+                    <f:selectItem itemLabel="4" itemValue="-10"/>
+                    <f:selectItem itemLabel="5" itemValue="-20"/>
                 </p:selectOneRadio>
                 Mentir :
                 <p:selectOneRadio id="mentir" value="#{karma.score}">
@@ -195,8 +195,8 @@ and open the template in the editor.
                     <f:selectItem itemLabel="1" itemValue="-10"/>
                     <f:selectItem itemLabel="2" itemValue="-5"/>
                     <f:selectItem itemLabel="3" itemValue="0"/>
-                    <f:selectItem itemLabel="4" itemValue="5"/>
-                    <f:selectItem itemLabel="5" itemValue="10"/>
+                    <f:selectItem itemLabel="4" itemValue="10"/>
+                    <f:selectItem itemLabel="5" itemValue="20"/>
                 </p:selectOneRadio>
                 Sauver le monde :
                 <p:selectOneRadio id="sauver" value="#{karma.score}">
