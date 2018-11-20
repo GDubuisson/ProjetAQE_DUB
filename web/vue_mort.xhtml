@@ -13,6 +13,18 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <p:dataTable var="car" value="#{vue.tout}">
+            <p:column headerText="Nom">
+                <h:outputText value="#{car.prenom}" />
+            </p:column>
+
+            <p:column headerText="Prenom">
+                <h:outputText value="#{car.nom}" />
+            </p:column>
+ 
+            <p:column headerText="Karma">
+                <h:outputText value="#{car.karma}" />
+            </p:column>
+        </p:dataTable>
     </body>
 </html>
