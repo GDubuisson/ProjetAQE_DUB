@@ -13,13 +13,14 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
  * @author LeRoux
  */
 @Named(value = "vue")
-@SessionScoped
+@ApplicationScoped
 public class Vue implements Serializable {
     
     @EJB
@@ -68,17 +69,35 @@ public class Vue implements Serializable {
         return ameDAO.findAll();
     }
     
-    /*public List getBien() {
-        return monAme.listIdPlace(1);
+    public List getBien() {
+        List<Ame> ames = getTout();
+        for (int i = ames.size()-1; i >= 0; i--) {
+            if (ames.get(i).getIdPlace()!=1) {
+                ames.remove(i);
+            }
+        }
+        return ames;
     }
     
     public List getPurg() {
-        return monAme.listIdPlace(3);
+        List<Ame> ames = getTout();
+        for (int i = ames.size()-1; i >= 0; i--) {
+            if (ames.get(i).getIdPlace()!=3) {
+                ames.remove(i);
+            }
+        }
+        return ames;
     }
     
     public List getMal() {
-        return monAme.listIdPlace(2);
-    }*/
+        List<Ame> ames = getTout();
+        for (int i = ames.size()-1; i >= 0; i--) {
+            if (ames.get(i).getIdPlace()!=2) {
+                ames.remove(i);
+            }
+        }
+        return ames;
+    }
     
     public void creerAme(String nom, String prenom, int karma) {
         Ame newAme = new Ame();
@@ -102,9 +121,5 @@ public class Vue implements Serializable {
         newAme.setIdAme(ameDAO.count()+1);
         System.out.println("Web.Vue.creerAme()1");
         ameDAO.create(newAme);
-    }
-    
-    public List<Ame> retourneTout() {
-        return ameDAO.findAll();
     }
 }

@@ -10,7 +10,11 @@
     </h:head>
     <h:body>
         <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
-            <p:dataTable var="car" value="#{vue.tout}">
+            <p:dataTable var="car" value="#{vue.bien}">
+                <p:column headerText="idPersonne">
+                    <h:outputText value="#{car.idAme}" />
+                </p:column>
+                
                 <p:column headerText="Nom">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
@@ -21,9 +25,18 @@
 
                 <p:column headerText="Karma">
                     <h:outputText value="#{car.karma}" />
+                </p:column>
+                
+                <p:column headerText="idPlace">
+                    <h:outputText value="#{car.idPlace}" />
                 </p:column>
             </p:dataTable>
-            <p:dataTable var="car" value="#{vue.tout}">
+            
+            <p:dataTable var="car" value="#{vue.purg}">
+                <p:column headerText="idPersonne">
+                    <h:outputText value="#{car.idAme}" />
+                </p:column>
+                
                 <p:column headerText="Nom">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
@@ -34,9 +47,18 @@
 
                 <p:column headerText="Karma">
                     <h:outputText value="#{car.karma}" />
+                </p:column>
+                
+                <p:column headerText="idPlace">
+                    <h:outputText value="#{car.idPlace}" />
                 </p:column>
             </p:dataTable>
-            <p:dataTable var="car" value="#{vue.tout}">
+            
+            <p:dataTable var="car" value="#{vue.mal}">
+                <p:column headerText="idPersonne">
+                    <h:outputText value="#{car.idAme}" />
+                </p:column>
+                
                 <p:column headerText="Nom">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
@@ -47,6 +69,10 @@
 
                 <p:column headerText="Karma">
                     <h:outputText value="#{car.karma}" />
+                </p:column>
+                
+                <p:column headerText="idPlace">
+                    <h:outputText value="#{car.idPlace}" />
                 </p:column>
             </p:dataTable>
         </h:panelGrid>
