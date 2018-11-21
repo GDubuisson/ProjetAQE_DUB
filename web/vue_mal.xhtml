@@ -8,11 +8,23 @@ and open the template in the editor.
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-    <head>
-        <title>TODO supply a title</title>
+    <h:head>
+        <title>Interface du mauvais endroit</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+    </h:head>
+    <h:body>
+        <p:dataTable var="car" value="#{vue.mal}">
+            <p:column headerText="Nom">
+                <h:outputText value="#{car.prenom}" />
+            </p:column>
+
+            <p:column headerText="Prenom">
+                <h:outputText value="#{car.nom}" />
+            </p:column>
+ 
+            <p:column headerText="Karma">
+                <h:outputText value="#{car.karma}" />
+            </p:column>
+        </p:dataTable>
+    </h:body>
 </html>

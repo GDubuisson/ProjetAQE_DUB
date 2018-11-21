@@ -67,9 +67,18 @@ public class Vue implements Serializable {
     public List getTout() {
         return ameDAO.findAll();
     }
-    public String getAllBD() {
-        return "Nom : "+getAmeNomBD()+" / Prénom : "+getAmePrenomBD()+" / Karma : "+ getAmeKarmaBD();
+    
+    /*public List getBien() {
+        return monAme.listIdPlace(1);
     }
+    
+    public List getPurg() {
+        return monAme.listIdPlace(3);
+    }
+    
+    public List getMal() {
+        return monAme.listIdPlace(2);
+    }*/
     
     public void creerAme(String nom, String prenom, int karma) {
         Ame newAme = new Ame();

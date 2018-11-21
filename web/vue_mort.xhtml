@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-    <head>
-        <title>TODO supply a title</title>
+    <h:head>
+        <title>Interface de la mort</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <p:dataTable var="car" value="#{vue.tout}">
-            <p:column headerText="Nom">
-                <h:outputText value="#{car.prenom}" />
-            </p:column>
+    </h:head>
+    <h:body>
+        <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
+            <p:dataTable var="car" value="#{vue.tout}">
+                <p:column headerText="Nom">
+                    <h:outputText value="#{car.prenom}" />
+                </p:column>
 
-            <p:column headerText="Prenom">
-                <h:outputText value="#{car.nom}" />
-            </p:column>
- 
-            <p:column headerText="Karma">
-                <h:outputText value="#{car.karma}" />
-            </p:column>
-        </p:dataTable>
-    </body>
+                <p:column headerText="Prenom">
+                    <h:outputText value="#{car.nom}" />
+                </p:column>
+
+                <p:column headerText="Karma">
+                    <h:outputText value="#{car.karma}" />
+                </p:column>
+            </p:dataTable>
+            <p:dataTable var="car" value="#{vue.tout}">
+                <p:column headerText="Nom">
+                    <h:outputText value="#{car.prenom}" />
+                </p:column>
+
+                <p:column headerText="Prenom">
+                    <h:outputText value="#{car.nom}" />
+                </p:column>
+
+                <p:column headerText="Karma">
+                    <h:outputText value="#{car.karma}" />
+                </p:column>
+            </p:dataTable>
+            <p:dataTable var="car" value="#{vue.tout}">
+                <p:column headerText="Nom">
+                    <h:outputText value="#{car.prenom}" />
+                </p:column>
+
+                <p:column headerText="Prenom">
+                    <h:outputText value="#{car.nom}" />
+                </p:column>
+
+                <p:column headerText="Karma">
+                    <h:outputText value="#{car.karma}" />
+                </p:column>
+            </p:dataTable>
+        </h:panelGrid>
+    </h:body>
 </html>

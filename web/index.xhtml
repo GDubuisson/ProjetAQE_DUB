@@ -7,65 +7,16 @@
         <title>Page d'accueil</title>
     </h:head>
     <h:body>
-        <!-- RELIER LE CODE A UNE BDD
-        
-        Faire du jsf, afficher quelque chose de la base de données
-        Table truc = 2 colonnes -> id et nom
-        On met un objet DAO comme variable globale qui permet d'acceder virtuellement aux objets
-        On doit faire le lien entre le java et la BDD = faire du mapping (C'EST MAPPING!!)
-        EJB : Entreprise Java Bean => genre de static
-        Base de données : Aller dans l'onglet services (en haut a gauche) / Clic droit sur bdd "ajouter connexion", choisir la bonne version (mySQL), 
-        cliquer sur suivant, mettre les informations de connexion et la bonne base de données. Cliquer sur suivant et ça marche
-        Projet => ajouter => autre => persistance => persistance unit
-            Dans data source => new data source => choisir nom & connexion BDD qui nous interesse ==> creation de la source de données Auto
-        projet => new => autre => persistance => entité class à partir de BDD
-        Selectionner la table qui va bien
-        Inscrire un nom de package (on l'appelle générallement entity)
-        
-        projet => new => autre => entreprise Java Bean => session Bean for entity class
-        On choisi l'entity qui va bien, verifier que ça va et le mettre dans un package DAO et cocher Local => creation des 3 fichiers (truc, truc facade et truc facade local)
-        
-        Dans index, on a besoin d'appeler un Bean
-        On peut créer auto => Projet => new => autre => JSF managed bean => nom = Vue / package = Web / Scope = session
-        
-        dans le view.java, on peut taper :
-        @EJB
-        TrucFacadeLocal trucDAO;
-        -> importer le pack trucfacadelocal
-        public String getValeur() {
-            Truc machin = trucdao.find(1);
-            return machin.getNom();
-        }
-        
-        dans l'index : appeler en faisant # {classepackageweb.valeur}
-        
-        -->
-        <!--<p:dataTable id="table" value="" var="gout">
-            <p:column headerText="Id">
-                <h:outputText value="" />
-            </p:column>
-            
-            <p:column headerText="Nom">
-                <h:outputText value="" />
-            </p:column>
- 
-            <p:column headerText="Prenom">
-                <h:outputText value="" />
-            </p:column>
- 
-            <p:column headerText="Karma">
-                <h:outputText value="" />
-            </p:column>
-            <p:column headerText="Place">
-                <h:outputText value=""/>
-            </p:column>
-        </p:dataTable>
-        <br/>-->
         <h1><center>APPLICATION D'INSCRIPTION POST-MORTEM</center></h1>
-        <h:form><center><p:commandButton value="Vous venez de mourir ? Cliquez ici" action="form_inscription.xhtml"/></center></h:form>
-        <h:form><center><p:commandButton value="Vous ne savez pas ou aller ? " action="vue_ame.xhtml"/></center></h:form>
-        <h:form><center><p:commandButton value="Vous gérez les morts ?" action="vue_mort.xhtml"/></center></h:form>
-        <h:form><center><p:commandButton value="Vous gérez le bon endroit ?" action="vue_bien.xhtml"/></center></h:form>
-        <h:form><center><p:commandButton value="Vous gérez le mauvais endroit ?" action="vue_mal.xhtml"/></center></h:form>
+        <h:form>
+            <center>
+                <p:commandButton value="Vous venez de mourir ? Cliquez ici" action="form_inscription.xhtml?faces-redirect=true" ajax="false"/>
+                <p:button value="Vous ne savez pas où vous êtes?" href="http://www.perdu.com"/><br/>
+                <p:commandButton value="Vous êtes mort?" action="vue_ame.xhtml" ajax="false"/>
+                <p:commandButton value="Vous gérez les morts ?" action="vue_mort.xhtml" ajax="false"/><br/>
+                <p:commandButton value="Vous gérez le bon endroit ?" action="vue_bien.xhtml" ajax="false"/>
+                <p:commandButton value="Vous gérez le mauvais endroit ?" action="vue_mal.xhtml" ajax="false"/>
+            </center>
+        </h:form>
     </h:body>
 </html>
