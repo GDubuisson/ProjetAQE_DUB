@@ -78,6 +78,7 @@ public class Ame implements Serializable {
     public Integer getIdAme() {
         return idAme;
     }
+    
 
     public void setIdAme(Integer idAme) {
         this.idAme = idAme;

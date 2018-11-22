@@ -14,6 +14,11 @@ import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.context.FacesContext;
+import org.primefaces.event.SelectEvent;
+import org.primefaces.model.LazyDataModel;
 
 /**
  *
@@ -22,6 +27,13 @@ import javax.enterprise.context.ApplicationScoped;
 @Named(value = "vue")
 @ApplicationScoped
 public class Vue implements Serializable {
+    
+    private LazyDataModel<Ame> lazyModel;
+     
+    private Ame selectedAme;
+    
+    @ManagedProperty("#{ameService}")
+    private Ame service;
     
     @EJB
     AmeFacadeLocal ameDAO;
@@ -122,4 +134,25 @@ public class Vue implements Serializable {
         System.out.println("Web.Vue.creerAme()1");
         ameDAO.create(newAme);
     }
+    
+   
+ 
+    public LazyDataModel<Ame> getLazyModel() {
+        return lazyModel;
+    }
+ 
+    public Ame getSelectedAme() {
+        return selectedAme;
+    }
+ 
+    public void setSelectedame(Ame selectedAme) {
+        this.selectedAme = selectedAme;
+    }
+     
+    public void setService(Ame service) {
+        this.service = service;
+    }
+     
+    
+    
 }
