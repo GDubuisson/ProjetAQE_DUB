@@ -13,47 +13,27 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-   <h:form id="form">
-    <p:dataTable var="car" value="#{dtLazyView.lazyModel}" paginator="true" rows="10"
-                 paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
-                 rowsPerPageTemplate="5,10,15,20,25,50,100,500,1000" selectionMode="single" selection="#{dtLazyView.selectedAme}" id="carTable" lazy="true">
-        <p:ajax event="rowSelect" listener="#{dtLazyView.onRowSelect}"  />
-        <p:column headerText="Id" sortBy="#{car.id}" filterBy="#{car.id}">
-            <h:outputText value="#{car.id}" />
-        </p:column>
-        <p:column headerText="Nom" sortBy="#{car.prenom}" filterBy="#{car.prenom}">
-            <h:outputText value="#{car.prenom}" />
-        </p:column>
-        <p:column headerText="Prenom" sortBy="#{car.nom}" filterBy="#{car.nom}">
-            <h:outputText value="#{car.nom}" />
-        </p:column>
-        <p:column headerText="Karma" sortBy="#{car.karma}" filterBy="#{car.karma}">
-            <h:outputText value="#{car.karma}" />
-        </p:column>
-    </p:dataTable>
- 
-    <p:dialog header="Car Detail" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
-        <p:outputPanel id="carDetail" style="text-align:center;">
-            <p:panelGrid  columns="2" rendered="#{not empty dtLazyView.selectedAme}" columnClasses="label,value">
-               
-                 
-                <h:outputText value="Id:" />
-                <h:outputText value="#{dtLazyView.selectedAme.id}" />
- 
-                <h:outputText value="prenom" />
-                <h:outputText value="#{dtLazyView.selectedAme.prenom}" />
+        <h:form id="form">
+            <p:dataTable var="car" value="#{vue.mal}">
                 
-                <h:outputText value="nom" />
-                <h:outputText value="#{dtLazyView.selectedAme.nom}" />
+                <p:column headerText="Id" sortBy="#{car.idAme}" filterBy="#{car.idAme}">
+                    <h:outputText value="#{car.idAme}" />
+                </p:column>
                 
-                <h:outputText value="karma" />
-                <h:outputText value="#{dtLazyView.selectedAme.karma}" />
- 
+                <p:column headerText="Nom" sortBy="#{car.prenom}" filterBy="#{car.prenom}">
+                    <h:outputText value="#{car.prenom}" />
+                </p:column>
                 
-            </p:panelGrid>
-        </p:outputPanel>
-    </p:dialog>
-</h:form>
-        
+                <p:column headerText="Prenom" sortBy="#{car.nom}" filterBy="#{car.nom}">
+                    <h:outputText value="#{car.nom}" />
+                </p:column>
+                
+                <p:column headerText="Karma" sortBy="#{car.karma}" filterBy="#{car.karma}">
+                    <h:outputText value="#{car.karma}" />
+                </p:column>
+                
+            </p:dataTable>
+        </h:form>
+
     </h:body>
 </html>

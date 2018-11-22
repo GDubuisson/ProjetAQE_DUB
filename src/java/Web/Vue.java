@@ -9,16 +9,11 @@ import DAO.AmeFacadeLocal;
 import DAO.PlaceFacadeLocal;
 import entity.Ame;
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
-import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.context.FacesContext;
-import org.primefaces.event.SelectEvent;
 import org.primefaces.model.LazyDataModel;
 
 /**
@@ -28,13 +23,6 @@ import org.primefaces.model.LazyDataModel;
 @Named(value = "vue")
 @ApplicationScoped
 public class Vue implements Serializable {
-    
-    private LazyDataModel<Ame> lazyModel;
-     
-    private Ame selectedAme;
-    
-    @ManagedProperty("#{ameService}")
-    private Ame service;
     
     @EJB
     AmeFacadeLocal ameDAO;
@@ -99,7 +87,7 @@ public class Vue implements Serializable {
                 .collect(Collectors.toList());
     }
 
-    public List getMal() {
+    public List<Ame> getMal() {
         return getTout()
                 .stream()
                 .filter(value -> value.getIdPlace() == 2)
@@ -112,7 +100,6 @@ public class Vue implements Serializable {
                 .filter(value ->(value.getPrenom() == null ? prenom == null : value.getPrenom().equals(prenom)))
                 .collect(Collectors.toList())
                 .get(0);
-        System.out.println(test.getPrenom());
         return test;
     }
     
@@ -125,26 +112,5 @@ public class Vue implements Serializable {
                 .setIdPlace(karma > 0 ? 1 : karma < 0 ? 2 : 3)
                 .setIdAme(ameDAO.count() + 1);
         ameDAO.create(newAme);
-    }
-    
-   
- 
-    public LazyDataModel<Ame> getLazyModel() {
-        return lazyModel;
-    }
- 
-    public Ame getSelectedAme() {
-        return selectedAme;
-    }
- 
-    public void setSelectedame(Ame selectedAme) {
-        this.selectedAme = selectedAme;
-    }
-     
-    public void setService(Ame service) {
-        this.service = service;
-    }
-     
-    
-    
+    }    
 }

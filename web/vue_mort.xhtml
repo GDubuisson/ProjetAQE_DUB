@@ -11,69 +11,63 @@
     <h:body>
         <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
             <p:dataTable var="car" value="#{vue.bien}">
-                <p:column headerText="idPersonne">
+
+                <p:column headerText="Id" sortBy="#{car.idAme}" filterBy="#{car.idAme}">
                     <h:outputText value="#{car.idAme}" />
                 </p:column>
-                
-                <p:column headerText="Nom">
+
+                <p:column headerText="Nom" sortBy="#{car.prenom}" filterBy="#{car.prenom}">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
 
-                <p:column headerText="Prenom">
+                <p:column headerText="Prenom" sortBy="#{car.nom}" filterBy="#{car.nom}">
                     <h:outputText value="#{car.nom}" />
                 </p:column>
 
-                <p:column headerText="Karma">
+                <p:column headerText="Karma" sortBy="#{car.karma}" filterBy="#{car.karma}">
                     <h:outputText value="#{car.karma}" />
                 </p:column>
-                
-                <p:column headerText="idPlace">
-                    <h:outputText value="#{car.idPlace}" />
-                </p:column>
+
             </p:dataTable>
-            
+            <!---------------------------------------------------------------------------------------------------- -->
             <p:dataTable var="car" value="#{vue.purg}">
-                <p:column headerText="idPersonne">
+
+                <p:column headerText="Id" sortBy="#{car.idAme}" filterBy="#{car.idAme}">
                     <h:outputText value="#{car.idAme}" />
                 </p:column>
-                
-                <p:column headerText="Nom">
+
+                <p:column headerText="Nom" sortBy="#{car.prenom}" filterBy="#{car.prenom}">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
 
-                <p:column headerText="Prenom">
+                <p:column headerText="Prenom" sortBy="#{car.nom}" filterBy="#{car.nom}">
                     <h:outputText value="#{car.nom}" />
                 </p:column>
 
-                <p:column headerText="Karma">
+                <p:column headerText="Karma" sortBy="#{car.karma}" filterBy="#{car.karma}">
                     <h:outputText value="#{car.karma}" />
                 </p:column>
-                
-                <p:column headerText="idPlace">
-                    <h:outputText value="#{car.idPlace}" />
-                </p:column>
+
             </p:dataTable>
-            
+            <!---------------------------------------------------------------------------------------------------- -->
             <p:dataTable var="car" value="#{vue.mal}">
-                <p:column headerText="idPersonne">
+
+                <p:column headerText="Id" sortBy="#{car.idAme}" filterBy="#{car.idAme}">
                     <h:outputText value="#{car.idAme}" />
                 </p:column>
-                
-                <p:column headerText="Nom">
+
+                <p:column headerText="Nom" sortBy="#{car.prenom}" filterBy="#{car.prenom}">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
 
-                <p:column headerText="Prenom">
+                <p:column headerText="Prenom" sortBy="#{car.nom}" filterBy="#{car.nom}">
                     <h:outputText value="#{car.nom}" />
                 </p:column>
 
-                <p:column headerText="Karma">
+                <p:column headerText="Karma" sortBy="#{car.karma}" filterBy="#{car.karma}">
                     <h:outputText value="#{car.karma}" />
                 </p:column>
-                
-                <p:column headerText="idPlace">
-                    <h:outputText value="#{car.idPlace}" />
-                </p:column>
+
             </p:dataTable>
         </h:panelGrid>
     </h:body>
