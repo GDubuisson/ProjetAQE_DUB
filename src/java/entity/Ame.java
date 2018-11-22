@@ -80,40 +80,45 @@ public class Ame implements Serializable {
     }
     
 
-    public void setIdAme(Integer idAme) {
+    public Ame setIdAme(Integer idAme) {
         this.idAme = idAme;
+        return this;
     }
 
     public String getPrenom() {
         return prenom;
     }
 
-    public void setPrenom(String prenom) {
+    public Ame setPrenom(String prenom) {
         this.prenom = prenom;
+        return this;
     }
 
     public String getNom() {
         return nom;
     }
 
-    public void setNom(String nom) {
+    public Ame setNom(String nom) {
         this.nom = nom;
+        return this;
     }
 
     public int getKarma() {
         return karma;
     }
 
-    public void setKarma(int karma) {
+    public Ame setKarma(int karma) {
         this.karma = karma;
+        return this;
     }
 
     public int getIdPlace() {
         return idPlace;
     }
 
-    public void setIdPlace(int idPlace) {
+    public Ame setIdPlace(int idPlace) {
         this.idPlace = idPlace;
+        return this;
     }
 
     @Override
