@@ -6,6 +6,10 @@
 package DAO;
 
 import entity.Ame;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,5 +32,13 @@ public class AmeFacade extends AbstractFacade<Ame> implements AmeFacadeLocal {
     public AmeFacade() {
         super(Ame.class);
     }
+
+    @Override
+    public List<Ame> findIdplace(int idplace) {
+              
+        List<Ame> resultList = em.createNativeQuery("select * from ame a where a.idplace = " + idplace)
+                .getResultList();
+        return resultList;
+     }
     
 }

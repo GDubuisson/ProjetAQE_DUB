@@ -27,6 +27,8 @@ public interface AmeFacadeLocal {
     List<Ame> findAll();
 
     List<Ame> findRange(int[] range);
+    
+    List<Ame> findIdplace(int idplace);
 
     int count();
     
