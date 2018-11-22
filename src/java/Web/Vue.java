@@ -13,15 +13,14 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.EJB;
-import javax.enterprise.context.ApplicationScoped;
-import org.primefaces.model.LazyDataModel;
+import javax.enterprise.context.SessionScoped;
 
 /**
  *
  * @author LeRoux
  */
 @Named(value = "vue")
-@ApplicationScoped
+@SessionScoped
 public class Vue implements Serializable {
     
     @EJB
