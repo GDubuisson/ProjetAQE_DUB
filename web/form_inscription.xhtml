@@ -25,8 +25,8 @@ and open the template in the editor.
             <h:panelGrid columns="2"  style="margin-bottom:10px" cellpadding="5">
                 Nom : <p:inputText id="nom" value="#{vue.ameNom}"/>
                 Prenom : <p:inputText id="prenom" value="#{vue.amePrenom}"/>
-                Date de Naissance : <p:inputMask id="ddn" mask="99/99/9999" value="#{karma.ddn}"/>
-                Date de Mort : <p:inputMask id="ddm" mask="99/99/9999" value="#{karma.ddm}"/>
+                Date de Naissance : <p:inputMask id="ddn" mask="99/99/9999"/>
+                Date de Mort : <p:inputMask id="ddm" mask="99/99/9999"/>
                 Raison de la mort : <p:inputText id="rdm"/>
                 Religion : <p:inputText id="religion"/>
                 Destination attendue :
@@ -51,9 +51,7 @@ and open the template in the editor.
                 Handicap mental : <p:inputSwitch id="HMent" style="width: 50px" onLabel="Oui" offLabel='Non' value="#{karma.HMent}"/>
                 Autre handicap : <p:inputSwitch id="autreHand" style="width: 50px" onLabel="Oui" offLabel='Non' value="#{karma.autreHand}"/>
                 </h:panelGrid>
-            <p:commandButton value="Suivant" action="pesee.xhtml">
-               <f:actionListener binding="#{karma.calculDate()}"/>
-            </p:commandButton>
+            <p:commandButton value="Suivant" action="pesee.xhtml"/>
         </h:form>
     </h:body>
 </html>

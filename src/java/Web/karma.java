@@ -5,15 +5,9 @@
  */
 package Web;
 
-import DAO.AmeFacadeLocal;
-import DAO.PlaceFacadeLocal;
-import entity.Ame;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
-import java.util.List;
-import javax.ejb.EJB;
-import java.util.Date;
 
 /**
  *
@@ -24,8 +18,6 @@ import java.util.Date;
 public class karma implements Serializable{
     
     private int score = 0;
-    private Date ddn;
-    private Date ddm;
     private boolean HPhy;
     private boolean HMent;
     private boolean autreHand;
@@ -41,23 +33,7 @@ public class karma implements Serializable{
     public void setScore(int score) {
         this.score += score;
     }
-
-    public Date getDdn() {
-        return ddn;
-    }
-
-    public void setDdn(Date ddn) {
-        this.ddn = ddn;
-    }
-
-    public Date getDdm() {
-        return ddm;
-    }
-
-    public void setDdm(Date ddm) {
-        this.ddm = ddm;
-    }
-
+    
     public boolean isHPhy() {
         return HPhy;
     }
@@ -80,16 +56,5 @@ public class karma implements Serializable{
 
     public void setAutreHand(boolean autreHand) {
         this.autreHand = autreHand;
-    }
-    
-    public void calculDate() {
-        if (ddn == null || ddm == null) {
-            setScore(0);
-        }
-        else if (((this.ddm.getTime()-this.ddn.getTime())/(1000*60*60*24*365))<50){
-            setScore(-10);
-        } else {
-            setScore(10);
-        }
     }
 }

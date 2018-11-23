@@ -256,6 +256,7 @@ and open the template in the editor.
             </h:panelGrid>
             <p:commandButton value="Suivant" action="index.xhtml">
                 <f:actionListener binding="#{vue.creerAme(vue.ameNom,vue.amePrenom,karma.score)}"/>
+                <f:actionListener binding="#{vue.reinit()}"/>
             </p:commandButton>
         </h:form>
     </h:body>

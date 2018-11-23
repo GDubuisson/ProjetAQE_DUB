@@ -127,5 +127,8 @@ public class Vue implements Serializable {
         this.ameTest = ameTest;
     }
     
-    
+    public void reinit() {
+        this.ameNom="";
+        this.amePrenom="";
+    }
 }
