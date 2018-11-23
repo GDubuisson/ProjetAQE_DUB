@@ -9,8 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
+        <h:form>
         <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
-            <p:dataTable var="car" value="#{vue.bien}">
+            <p:dataTable id="bien" var="car" value="#{vue.bien}">
                 
                 <p:column headerText="Id">
                     <h:outputText value="#{car.idAme}" />
@@ -26,11 +27,38 @@
                 
                 <p:column headerText="Karma">
                     <h:outputText value="#{car.karma}" />
+                </p:column>
+                
+                <p:column headerText="Supprimer">
+                    <p:commandButton value="" action="#{vue.suppr(car)}" update="bien"/>
+                </p:column>
+            </p:dataTable>
+            
+            <p:dataTable id="purg" var="car" value="#{vue.purg}">
+                
+                <p:column headerText="Id">
+                    <h:outputText value="#{car.idAme}" />
+                </p:column>
+                
+                <p:column headerText="Prenom">
+                    <h:outputText value="#{car.prenom}" />
+                </p:column>
+                
+                <p:column headerText="Nom">
+                    <h:outputText value="#{car.nom}" />
+                </p:column>
+                
+                <p:column headerText="Karma">
+                    <h:outputText value="#{car.karma}" />
+                </p:column>
+                
+                <p:column headerText="Supprimer">
+                    <p:commandButton value="" action="#{vue.suppr(car)}" update="purg"/>
                 </p:column>
                 
             </p:dataTable>
             
-            <p:dataTable var="car" value="#{vue.purg}">
+            <p:dataTable id="mal" var="car" value="#{vue.mal}">
                 
                 <p:column headerText="Id">
                     <h:outputText value="#{car.idAme}" />
@@ -48,27 +76,11 @@
                     <h:outputText value="#{car.karma}" />
                 </p:column>
                 
-            </p:dataTable>
-            
-            <p:dataTable var="car" value="#{vue.mal}">
-                
-                <p:column headerText="Id">
-                    <h:outputText value="#{car.idAme}" />
+                <p:column headerText="Supprimer">
+                    <p:commandButton value="" action="#{vue.suppr(car)}" update="mal"/>
                 </p:column>
-                
-                <p:column headerText="Nom">
-                    <h:outputText value="#{car.prenom}" />
-                </p:column>
-                
-                <p:column headerText="Prenom">
-                    <h:outputText value="#{car.nom}" />
-                </p:column>
-                
-                <p:column headerText="Karma">
-                    <h:outputText value="#{car.karma}" />
-                </p:column>
-                
             </p:dataTable>
         </h:panelGrid>
+        </h:form>
     </h:body>
 </html>

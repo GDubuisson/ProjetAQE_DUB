@@ -13,6 +13,25 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <div>TODO write content</div>
+        <p:dataTable var="pif" value="#{vue.ameTest}">
+            <p:column headerText="Prenom">
+                    <h:outputText value="#{pif.prenom}"/>
+            </p:column> 
+            
+            <p:column headerText="Nom">
+                    <h:outputText value="#{pif.nom}"/>
+            </p:column>
+            
+            <p:column headerText="Karma">
+                    <h:outputText value="#{pif.karma}"/>
+            </p:column>
+            
+            <p:column headerText="idPlace">
+                    <h:outputText value="#{pif.idPlace}"/>
+            </p:column>
+        </p:dataTable>
+        <h:form>
+            <p:commandButton value="Page principale" action="index.xhtml"/>
+        </h:form>
     </h:body>
 </html>
