@@ -13,19 +13,19 @@
         <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
             <p:dataTable id="bien" var="car" value="#{vue.bien}">
                 
-                <p:column headerText="Id">
+                <p:column headerText="Id" sortBy="#{car.idAme}">
                     <h:outputText value="#{car.idAme}" />
                 </p:column>
                 
-                <p:column headerText="Nom">
+                <p:column headerText="Nom" sortBy="#{car.prenom}">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
                 
-                <p:column headerText="Prenom">
+                <p:column headerText="Prenom" sortBy="#{car.nom}">
                     <h:outputText value="#{car.nom}" />
                 </p:column>
                 
-                <p:column headerText="Karma">
+                <p:column headerText="Karma" sortBy="#{car.karma}">
                     <h:outputText value="#{car.karma}" />
                 </p:column>
                 
@@ -36,19 +36,19 @@
             
             <p:dataTable id="purg" var="car" value="#{vue.purg}">
                 
-                <p:column headerText="Id">
+                <p:column headerText="Id" sortBy="#{car.idAme}">
                     <h:outputText value="#{car.idAme}" />
                 </p:column>
                 
-                <p:column headerText="Prenom">
+                <p:column headerText="Nom" sortBy="#{car.prenom}">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
                 
-                <p:column headerText="Nom">
+                <p:column headerText="Prenom" sortBy="#{car.nom}">
                     <h:outputText value="#{car.nom}" />
                 </p:column>
                 
-                <p:column headerText="Karma">
+                <p:column headerText="Karma" sortBy="#{car.karma}">
                     <h:outputText value="#{car.karma}" />
                 </p:column>
                 
@@ -60,19 +60,19 @@
             
             <p:dataTable id="mal" var="car" value="#{vue.mal}">
                 
-                <p:column headerText="Id">
+                <p:column headerText="Id" sortBy="#{car.idAme}">
                     <h:outputText value="#{car.idAme}" />
                 </p:column>
                 
-                <p:column headerText="Nom">
+                <p:column headerText="Nom" sortBy="#{car.prenom}">
                     <h:outputText value="#{car.prenom}" />
                 </p:column>
                 
-                <p:column headerText="Prenom">
+                <p:column headerText="Prenom" sortBy="#{car.nom}">
                     <h:outputText value="#{car.nom}" />
                 </p:column>
                 
-                <p:column headerText="Karma">
+                <p:column headerText="Karma" sortBy="#{car.karma}">
                     <h:outputText value="#{car.karma}" />
                 </p:column>
                 
