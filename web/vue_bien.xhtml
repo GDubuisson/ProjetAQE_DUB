@@ -17,9 +17,8 @@ and open the template in the editor.
             <center> 
                 <p:commandButton value="Retour à l'accueil" action="index.xhtml" ajax="false"/><br/>
             </center>
-        </h:form>
         <br></br>
-        <p:dataTable var="car" value="#{vue.bien}">
+        <p:dataTable id="bien" var="car" value="#{vue.bien}">
             <p:column headerText="Nom">
                 <h:outputText value="#{car.prenom}" />
             </p:column>
@@ -31,6 +30,11 @@ and open the template in the editor.
             <p:column headerText="Karma">
                 <h:outputText value="#{car.karma}" />
             </p:column>
+            
+            <p:column headerText="Supprimer">
+                    <p:commandButton value="" action="#{vue.suppr(car)}" update="bien"/>
+            </p:column>
         </p:dataTable>
+        </h:form>
     </h:body>
 </html>
