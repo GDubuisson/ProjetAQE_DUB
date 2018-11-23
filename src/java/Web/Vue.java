@@ -30,6 +30,7 @@ public class Vue implements Serializable {
 
     private String amePrenom;
     private String ameNom;
+    private Ame ameTest;
 
     /**
      * Creates a new instance of Vue
@@ -71,6 +72,10 @@ public class Vue implements Serializable {
     public List<Ame> getTout() {
         return ameDAO.findAll();
     }
+    
+    public void suppr(Ame ame){
+        ameDAO.remove(ame);
+    }
 
     public List getBien() {
         return getTout()
@@ -93,13 +98,14 @@ public class Vue implements Serializable {
                 .collect(Collectors.toList());
     }
     
-    public Ame getByPrenom(String prenom) {
-        Ame test = getTout()
-                .stream()
-                .filter(value ->(value.getPrenom() == null ? prenom == null : value.getPrenom().equals(prenom)))
-                .collect(Collectors.toList())
-                .get(0);
-        return test;
+    public void getByPersonne() {
+        List<Ame> MERDE = getTout();
+        for (int i = 0; i < MERDE.size(); i++) {
+            if ((MERDE.get(i).getNom() == null ? this.getAmeNom() == null : MERDE.get(i).getNom().equals(this.getAmeNom())) 
+                    & (MERDE.get(i).getPrenom() == null ? this.getAmePrenom()== null : MERDE.get(i).getPrenom().equals(this.getAmePrenom()))) {
+                ameTest=MERDE.get(i);
+            }
+        }        
     }
     
     public void creerAme(String nom, String prenom, int karma) {
@@ -112,4 +118,14 @@ public class Vue implements Serializable {
                 .setIdAme(ameDAO.count() + 1);
         ameDAO.create(newAme);
     }    
+
+    public Ame getAmeTest() {
+        return ameTest;
+    }
+
+    public void setAmeTest(Ame ameTest) {
+        this.ameTest = ameTest;
+    }
+    
+    
 }

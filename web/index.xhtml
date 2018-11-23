@@ -4,73 +4,68 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    
+
     <style type="text/css">
-      </style>
+    </style>
 
     <h:head>
         <title>Page d'accueil</title>
     </h:head>
     <h:body>
-        
-            <p:growl id="msgs" showDetail="true" />
- 
-    <p:panel id="basic" header="APPLICATION D'INSCRIPTION POST-MORTEM" footer="Choisissez une destination" style="margin-bottom:20px">
-        <center>
-            <h:panelGrid columns="5" cellpadding="4">
-           
-        
-               
-                <p:graphicImage value="images/death.jpg" title="Vous êtes la mort ?"/>
-                
-                <p:graphicImage value="images/heaven.png" title="Gestion du bon endroit"/> 
-                
-                <p:graphicImage value="images/balance.png" title="Pesez votre âme"/>
-            
-                <p:graphicImage value="images/hell.png" title="Gestion du mauvais endroit"/>
-                
-                <p:graphicImage value="images/styx.jpg" title="Observez les ames"/>
-                
-                
-                <h:form>
-                    <center> 
-                    <p:commandButton value="Vous gérez les morts ?" action="vue_mort.xhtml" ajax="false"/><br/>
-                    </center>
-                </h:form>
-                
-                <h:form>
-                    <center> 
-                    <p:commandButton value="Vous gérez le bon endroit ?" action="vue_bien.xhtml" ajax="false"/>
-                    </center>
-                </h:form>
-                
-                <h:form>
-                    <center> 
-                    <p:commandButton value="test" action="form_inscription.xhtml" ajax="false"/>
-                    </center>
-                </h:form>
-                
-                <h:form>
-                    <center> 
-                    <p:commandButton value="Vous gérez le mauvais endroit ?" action="vue_mal.xhtml" ajax="false"/>
-                    </center>
-                </h:form>
-                
-                <h:form>
-                    <center> 
-                        <p:commandButton value="Vous êtes mort?" action="vue_ame.xhtml" ajax="false"/>
-                    </center>
-                </h:form>
-                
-                
-                
-                
-                
-            </h:panelGrid>
-        </center>
-      </p:panel>
-            <center> 
+
+        <p:growl id="msgs" showDetail="true" />
+
+        <p:panel id="basic" header="APPLICATION D'INSCRIPTION POST-MORTEM" footer="Choisissez une destination" style="margin-bottom:20px">
+            <center>
+                <h:panelGrid columns="5" cellpadding="4">
+
+
+
+                    <p:graphicImage value="images/death.jpg" title="Vous êtes la mort ?"/>
+
+                    <p:graphicImage value="images/heaven.png" title="Gestion du bon endroit"/> 
+
+                    <p:graphicImage value="images/balance.png" title="Pesez votre âme"/>
+
+                    <p:graphicImage value="images/hell.png" title="Gestion du mauvais endroit"/>
+
+                    <p:graphicImage value="images/styx.jpg" title="Observez les ames"/>
+
+
+                    <h:form>
+                        <center> 
+                            <p:commandButton value="Vous gérez les morts ?" action="vue_mort.xhtml" ajax="false"/><br/>
+                        </center>
+                    </h:form>
+
+                    <h:form>
+                        <center> 
+                            <p:commandButton value="Vous gérez le bon endroit ?" action="vue_bien.xhtml" ajax="false"/>
+                        </center>
+                    </h:form>
+
+                    <h:form>
+                        <center> 
+                            <p:commandButton value="test" action="form_inscription.xhtml" ajax="false"/>
+                        </center>
+                    </h:form>
+
+                    <h:form>
+                        <center> 
+                            <p:commandButton value="Vous gérez le mauvais endroit ?" action="vue_mal.xhtml" ajax="false"/>
+                        </center>
+                    </h:form>
+
+                    <h:form>
+                        <center> 
+                            <p:commandButton value="Vous êtes mort?" action="pass.xhtml" ajax="false"/>
+                        </center>
+                    </h:form>
+                </h:panelGrid>
+            </center>
+        </p:panel>
+        <center> 
             <p:button value="Vous ne savez pas où vous êtes?" href="http://www.perdu.com"/><br/>
-            </center> 
+        </center> 
     </h:body>
 </html>
