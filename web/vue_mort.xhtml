@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
+        <h:form>
         <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
             <p:dataTable id="bien" var="car" value="#{vue.bien}">
                 
@@ -80,5 +81,6 @@
                 </p:column>
             </p:dataTable>
         </h:panelGrid>
+        </h:form>
     </h:body>
 </html>
