@@ -13,6 +13,12 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
+        <h:form>
+            <center> 
+                <p:commandButton value="Retour à l'accueil" action="index.xhtml" ajax="false"/><br/>
+            </center>
+        </h:form>
+        <br></br>
         <p:dataTable var="pif" value="#{vue.ameTest}">
             <p:column headerText="Prenom">
                     <h:outputText value="#{pif.prenom}"/>

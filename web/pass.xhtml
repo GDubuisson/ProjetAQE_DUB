@@ -15,6 +15,12 @@ and open the template in the editor.
     </h:head>
     <h:body>
         <h:form>
+            <center> 
+                <p:commandButton value="Retour à l'accueil" action="index.xhtml" ajax="false"/><br/>
+            </center>
+        </h:form>
+        <br></br>
+        <h:form>
         Nom : <p:inputText value="#{vue.ameNom}"/>
         Prenom : <p:inputText value="#{vue.amePrenom}"/>
         <p:commandButton value="Valider" action="vue_ame.xhtml">

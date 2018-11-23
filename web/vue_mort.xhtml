@@ -10,6 +10,12 @@
     </h:head>
     <h:body>
         <h:form>
+            <center> 
+                <p:commandButton value="Retour à l'accueil" action="index.xhtml" ajax="false"/><br/>
+            </center>
+        </h:form>
+        <br></br>
+        <h:form>
         <h:panelGrid columns="3"  style="margin-bottom:10px" cellpadding="10">
             <p:dataTable id="bien" var="car" value="#{vue.bien}">
                 
